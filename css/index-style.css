@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&family=Roboto+Slab&display=swap');
 * {
     box-sizing: border-box;
   }
@@ -7,7 +7,9 @@
   body {
     font-family: Arial;
     padding: 20px;
-    background: #f1f1f1;
+ 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   
   /* Header/Blog Title */
@@ -15,14 +17,14 @@
     padding: 30px;
     font-size: 40px;
     text-align: center;
-    background: white;
+    background: rgb(1, 82, 107);
     font-family: 'Roboto Slab', serif;
     border-radius: 25px;
-    background-image: url("../img/index/head_img.jpg");
+    background-image: url("../img/wood.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #ffff;
+    color: rgb(0, 0, 0);
   }
   
   /* Create two unequal columns that floats next to each other */
@@ -117,4 +119,13 @@
       width: 100%;
       padding: 0;
     }
+  }
+
+  h2{
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  h2{
+    font-family: 'Roboto Mono', monospace;
+
   }
