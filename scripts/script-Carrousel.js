@@ -2,15 +2,41 @@
    Autor: Carlos Rodrigo Hernández Zavala
 
     */
+ const tiempo = 5000;
+ let actualImg = 1
 
-let carrousel = () => {
-
-    for (i = 1; i < 4; i++){
-        let divImagen = document.createElement('div')
-        divImagen.id = 'imgDiv' + i
-        divImagen.innerHTML = '<img src="img/img'+i+'.jpg" alt="" width="400" height="600">'
-        console.log(divImagen.innerHTML)
-        document.getElementById("mainDiv").appendChild(divImagen)
-    }
-
+ let cambioImagen = (param) => {
+     if(param === 'izq' && actualImg === 1){
+            actualImg = 4
+            document.getElementById('cajaC').style.backgroundImage="url('../img/Carrusel/img" + actualImg + ".jpg')"
+        }else if(param === 'der' && actualImg === 5){
+            actualImg = 1
+            document.getElementById('cajaC').style.backgroundImage="url('../img/Carrusel/img" + actualImg + ".jpg')"
+        }else if(param === 'izq' && actualImg != 1){
+            actualImg--
+            document.getElementById('cajaC').style.backgroundImage="url('../img/Carrusel/img" + actualImg + ".jpg')"
+        }else if(param === 'der' && actualImg != 5){
+            actualImg++
+            document.getElementById('cajaC').style.backgroundImage="url('../img/Carrusel/img" + actualImg + ".jpg')"
+        }  
 }
+
+let cambioImagenAuto = () => {
+    if(actualImg === 1){
+           actualImg = 5
+           document.getElementById('cajaC').style.backgroundImage="url('../img/Carrusel/img" + actualImg + ".jpg')"
+       }else if(actualImg === 5){
+           actualImg = 1
+           document.getElementById('cajaC').style.backgroundImage="url('../img/Carrusel/img" + actualImg + ".jpg')"
+       }else if(actualImg != 1){
+           actualImg--
+           document.getElementById('cajaC').style.backgroundImage="url('../img/Carrusel/img" + actualImg + ".jpg')"
+       }else if(actualImg != 5){
+           actualImg++
+           document.getElementById('cajaC').style.backgroundImage="url('../img/Carrusel/img" + actualImg + ".jpg')"
+       }  
+}
+
+setInterval(() => {
+    cambioImagenAuto()
+}, tiempo)

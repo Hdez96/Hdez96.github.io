@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Add a gray background color with some padding */
+  body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f1f1f1;
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 25px;
+    background-image: url("../img/index/head_img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffff;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {
+    border-radius: 45px;   
+    float: left;
+    width: 100%;
+  }
+  
+  /* Right column */
+
+  
+  /* Fake image */
+  #pag1.fakeimg {
+    width: 50%;
+    padding: 20px;
+    background-image: url("../img/index/countd.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #pag2.fakeimg {
+    width: 50%;
+    padding: 20px;
+    background-image: url("../img/index/carrusel.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #pag3.fakeimg {
+    width: 50%;
+    padding: 20px;
+    background-image: url("../img/index/hexbox.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #pag4.fakeimg {
+    width: 50%;
+    padding: 20px;
+    background-image: url("../img/index/click.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #pag5.fakeimg {
+    width: 50%;
+    padding: 20px;
+    background-image: url("../img/index/wsize.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #profile.fakeimg {
+    width: 50%;
+    padding: 20px;
+    background-image: url("../img/index/21273757_159518541267762_4163239567205477148_o.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {  
+     border-radius: 25px; 
+      width: 100%;
+      padding: 0;
+    }
+  }

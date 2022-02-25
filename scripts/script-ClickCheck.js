@@ -8,8 +8,8 @@ let xSize, ySize, xClick, yClick
 
 let checkPantalla = () => {
 
-    xSize = screen.width
-    ySize = screen.height
+    xSize = window.outerWidth;
+    ySize = window.outerHeight;
 
 }
 
@@ -22,13 +22,13 @@ let getPosicionMouse = (event) => {
 
     let checkCuadrante = () => {
         if(xClick < (Math.floor(xSize/2)) && yClick < (Math.floor(ySize/2))){
-            document.getElementById("HexText").innerHTML = "Izquierda Arriba"
+            document.getElementById("clickBox").innerHTML = "Izquierda Arriba" + " "
         }else if(xClick > (Math.floor(xSize/2)) && yClick < (Math.floor(ySize/2))){
-            document.getElementById("HexText").innerHTML = "Derecha Arriba"
+            document.getElementById("clickBox").innerHTML = "Derecha Arriba"
         }else if(xClick < (Math.floor(xSize/2)) && yClick > (Math.floor(ySize/2))){
-            document.getElementById("HexText").innerHTML = "Izquierda Abajo"
+            document.getElementById("clickBox").innerHTML = "Izquierda Abajo"
         }else if(xClick > (Math.floor(xSize/2)) && yClick > (Math.floor(ySize/2))){
-            document.getElementById("HexText").innerHTML = "Derecha Abajo"
+            document.getElementById("clickBox").innerHTML = "Derecha Abajo"
         }
     }
     checkCuadrante()
